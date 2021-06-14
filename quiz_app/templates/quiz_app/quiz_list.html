@@ -1,0 +1,11 @@
+{% extends "quiz_app/index.html" %}
+{% block content %}
+    <h1>Выберите тему квиза</h1>
+    <div class="quiz-list">
+        {% for quiz in quiz_list %}
+            <a href={% url 'question' quiz.id 1 %}>
+                <span>{{ quiz.title }}</span>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

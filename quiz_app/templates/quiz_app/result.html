@@ -1,0 +1,10 @@
+{% extends "quiz_app/index.html" %}
+{% block content %}
+    <div class="result-container">
+        <h2>В теме {{ quiz.title }} вы разбираетесь на</h2>
+        <h1 class="result">{{ result }}%</h1>
+        <form action={% url 'index' %}>
+            <input type="submit" value="К списку тем"/>
+        </form>
+    </div>
+{% endblock %}
